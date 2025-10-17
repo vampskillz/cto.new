@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>♔ Chess Game ♚</h1>
+        </header>
+        
+        <div class="game-container">
+            <div class="sidebar">
+                <div class="game-info">
+                    <div class="turn-indicator">
+                        <h2>Current Turn</h2>
+                        <div class="turn-display">
+                            <span class="turn-piece" id="turnPiece">♔</span>
+                            <span class="turn-text" id="turnText">White's Turn</span>
+                        </div>
+                    </div>
+                    
+                    <div class="game-status" id="gameStatus"></div>
+                    
+                    <div class="controls">
+                        <button id="newGameBtn" class="btn btn-primary">New Game</button>
+                    </div>
+                </div>
+                
+                <div class="move-history">
+                    <h3>Move History</h3>
+                    <div id="moveList" class="move-list"></div>
+                </div>
+            </div>
+            
+            <div class="board-wrapper">
+                <div id="chessboard" class="chessboard"></div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="promotionDialog" class="promotion-dialog hidden">
+        <div class="promotion-content">
+            <h3>Promote Pawn</h3>
+            <p>Choose a piece:</p>
+            <div class="promotion-options" id="promotionOptions"></div>
+        </div>
+    </div>
+    
+    <script src="chess.js"></script>
+</body>
+</html>
